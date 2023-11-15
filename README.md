@@ -103,7 +103,7 @@ Hello world
 В вашем окне браузера перейдите по ссылке и подставьте этот идентифика́тор для скачивания только что созданного документа. Например:
 
 ```
-http://127.0.0.1:8000/download_document/16bFqem52ro4IUAKlAZADJ1o-mX6_ZmF6rlcxIndVEcg
+http://127.0.0.1:8000/api/download_document/16bFqem52ro4IUAKlAZADJ1o-mX6_ZmF6rlcxIndVEcg
 ```
 
 Начнется скачивание документа в формате docx с именем и содержанием которое вы указали ранее. Например:
