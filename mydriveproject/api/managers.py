@@ -51,7 +51,7 @@ from mydriveproject.settings import TOKEN, CREDENTIALS, SCOPES
 
 
 class GoogleDriveManager:
-    """
+    '''
     GoogleDriveManager - A class for managing interactions with Google Drive.
 
     This class encapsulates functionalities related to Google Drive, such as
@@ -86,9 +86,9 @@ class GoogleDriveManager:
     Note:
         Ensure that the 'mydriveproject.settings' module is configured with
         valid TOKEN, CREDENTIALS, and SCOPES.
-    """
+    '''
     def __init__(self):
-        """
+        '''
         Initialize the GoogleDriveManager.
 
         This constructor sets up the GoogleDriveManager instance with the
@@ -102,11 +102,11 @@ class GoogleDriveManager:
 
         Returns:
             None
-        """
+        '''
         self.creds = self.get_credentials()
 
     def get_credentials(self):
-        """
+        '''
         Retrieve and refresh OAuth 2.0 credentials for Google Drive.
 
         This method checks if valid credentials are stored locally. If not, it
@@ -120,7 +120,7 @@ class GoogleDriveManager:
         Returns:
             Credentials: OAuth 2.0 credentials for authenticating with Google
             Drive.
-        """
+        '''
         creds = None
         if os.path.exists(TOKEN):
             creds = Credentials.from_authorized_user_file(TOKEN)
@@ -140,7 +140,7 @@ class GoogleDriveManager:
         return creds
 
     def create_google_drive_document(self, data, name):
-        """
+        '''
         Create a new Google Drive document.
 
         This method creates a new Google Drive document with the provided data
@@ -153,7 +153,7 @@ class GoogleDriveManager:
 
         Returns:
             str: The ID of the created document.
-        """
+        '''
         drive_service = build('drive', 'v3', credentials=self.creds)
         file_metadata = {
             'name': name, 'mimeType': 'application/vnd.google-apps.document'
@@ -171,7 +171,7 @@ class GoogleDriveManager:
         return created_file.get('id')
 
     def download_google_drive_document(self, file_id):
-        """
+        '''
         Download a Google Drive document.
 
         This method downloads the Google Drive document with the specified
@@ -185,7 +185,7 @@ class GoogleDriveManager:
         Returns:
             tuple: A tuple containing the downloaded data (bytes) and the name
             of the downloaded document.
-        """
+        '''
         drive_service = build('drive', 'v3', credentials=self.creds)
         file_metadata = drive_service.files().get(fileId=file_id).execute()
 

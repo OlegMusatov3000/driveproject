@@ -1,4 +1,4 @@
-"""
+'''
 Django management command to interactively create a new document, save it to
 Google Drive,
 and print the file_id for further download.
@@ -13,7 +13,7 @@ along with a download link.
 
 Example:
     python manage.py create_new_document
-"""
+'''
 from django.core.management.base import BaseCommand
 from rest_framework.test import APIRequestFactory
 
@@ -22,10 +22,10 @@ from mydriveproject.settings import API_URL
 
 
 class Command(BaseCommand):
-    """
+    '''
     Django management command to create a new document interactively and print
     the file_id.
-    """
+    '''
     help = 'Create a new document and print the file_id'
 
     def handle(self, *args, **kwargs):
