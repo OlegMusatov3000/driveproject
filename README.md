@@ -9,6 +9,7 @@
 ### Технологии
 - Python 3.10
 - Django 4.2.7
+- Djangorestframework 3.14.0
 
 ### Используемые модули
 - google-api-python-client 2.108.0

@@ -15,11 +15,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from mydriveapp.views import create_google_drive_document, download_google_drive_document
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('create_document/', create_google_drive_document, name='create_document'),
-    path('download_document/<slug:file_id>', download_google_drive_document, name='download_document'),
+    path('api/', include('api.urls'), name='api'),
 ]
