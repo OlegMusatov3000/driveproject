@@ -115,3 +115,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 TOKEN = BASE_DIR / 'token.json'
 CREDENTIALS = BASE_DIR / 'credentials.json'
 SCOPES = ['https://www.googleapis.com/auth/drive.file']
+
+API_URL = 'http://127.0.0.1:8000/api/download_document/'
