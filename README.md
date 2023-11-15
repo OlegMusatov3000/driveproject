@@ -42,7 +42,7 @@ python -m venv venv
 - Для Linux и macOS:
 
 ```
-python3 -m venv venv
+python3.10 -m venv venv
 ```
 
 Активировать виртуальное окружение:
@@ -62,7 +62,7 @@ source venv/bin/activate
 Установить зависимости из файла requirements.txt:
 
 ```
-python3 -m pip install --upgrade pip
+python -m pip install --upgrade pip
 ```
 
 ```
@@ -78,13 +78,13 @@ cd mydriveproject
 Запустить проект (если хотите протестировать локально):
 
 ```
-python3 manage.py runserver
+python manage.py runserver
 ```
 
 Создать новое окно терминала (если выполняли команду runserver) и выполнить команду в директории с файлом manage.py:
 
 ```
-python3 manage.py create_new_document
+python manage.py create_new_document
 ```
 
 В командной строчке вас попросят последовательно ввести требуемое название документа и его содержание. Например:
@@ -103,7 +103,7 @@ python3 manage.py create_new_document
 
 Используйте его для скачивания документа по адресу:
 
-https://driveproject.pythonanywhere.com/api/download_document/1LCrB_Hkwk4n_cUfBMrpE_bMahbO-iCJlpHGfM5eb9QQ
+https://driveproject.pythonanywhere.com/api/download_document/1T79yWi_zXHGTJN3uF0e90X_BELgRf4Yh0FNkkwih7ng
 ```
 
 Начнется скачивание документа в формате docx с именем и содержанием которое вы указали ранее. Например:
