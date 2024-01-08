@@ -81,7 +81,7 @@ cd mydriveproject
 python manage.py runserver
 ```
 
-Создать новое окно терминала (если выполняли команду runserver) и выполнить команду в директории с файлом manage.py:
+Создать новое окно терминала, снова активировать виртуальное окружение (если выполняли команду runserver) и выполнить команду в директории с файлом manage.py:
 
 ```
 python manage.py create_new_document
